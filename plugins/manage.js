@@ -687,7 +687,7 @@ const oldSudo = config.SUDO?.split(",")
             if (process.env.ANTI_WORDS == 'auto') disallowedWords = require('badwords/array');
             let thatWord = containsDisallowedWords(message.message,disallowedWords)
             if (thatWord){
-                await message.sendReply(`_karva li LMS Handling. ab dafa ho jaoo_ 😂😎`);
+                await message.sendReply(`_karva li LMS Handling. ab apko is group se ba ezat dafa kia jata hai_ 🤓`);
                 await message.client.groupParticipantsUpdate(message.jid, [message.sender], "remove")
                 return await message.client.sendMessage(message.jid, { delete: message.data.key })
                                 
@@ -703,7 +703,7 @@ const oldSudo = config.SUDO?.split(",")
         if (!(await isAdmin(message,message.sender))) {
         var usr = message.sender.includes(":") ? message.sender.split(":")[0]+"@s.whatsapp.net" : message.sender
         await message.client.sendMessage(message.jid, { delete: message.data.key })
-        await message.sendReply("_Link send krny ka buhat shukria. ab dafa ho jao_ 😎😂");
+        await message.sendReply("_Link send krny ka buhat shukria. ab apko is group se ba ezat dafa kia jata ha._ 🤓");
         await message.client.groupParticipantsUpdate(message.jid, [usr], "remove")
         }
         }
